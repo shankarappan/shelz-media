@@ -4,6 +4,7 @@
 import Link from '@/components/site/link';
 import { assetPath } from '@/lib/site-path';
 import { ArrowUpRight, MessageCircle, Mail, Phone } from 'lucide-react';
+import { SocialLinks } from '@/components/site/social-links';
 import { business, whatsappUrl } from '@/lib/site-config';
 export function Footer() {
   return (
@@ -51,6 +52,7 @@ export function Footer() {
             </Link>
           </div>
         </div>
+        <SocialLinks />
         <details id="privacy" className="privacy">
           <summary>Privacy & image credits</summary>
           <p>

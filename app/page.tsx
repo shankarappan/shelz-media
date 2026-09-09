@@ -14,6 +14,7 @@ import {
   Plus,
 } from 'lucide-react';
 import { Hero } from '@/components/site/hero';
+import { SocialLinks } from '@/components/site/social-links';
 import { Header } from '@/components/site/header';
 import { Footer } from '@/components/site/footer';
 import { Portfolio } from '@/components/site/portfolio';
@@ -360,24 +361,10 @@ export default function Home() {
             <Clapperboard size={32} strokeWidth={1.3} />
             <h3>Behind the moments.</h3>
             <p>
-              Event stories, creative details and life behind the scenes. Our
-              social feed will appear here when our official profiles are
-              connected.
+              Follow Shelz Media on Instagram and Facebook for event stories,
+              creative details and life behind the scenes.
             </p>
-            {Object.entries(business.social)
-              .filter(([, url]) => url)
-              .map(([name, url]) => (
-                <Link
-                  className="text-link"
-                  key={name}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Follow on {name}
-                  <ArrowUpRight size={17} />
-                </Link>
-              ))}
+            <SocialLinks />
             <Link className="text-link" href={`mailto:${business.email}`}>
               Ask for our latest work <ArrowUpRight size={18} />
             </Link>
@@ -411,6 +398,7 @@ export default function Home() {
             >
               <MessageCircle size={18} /> Prefer WhatsApp? Let’s chat
             </Link>
+            <SocialLinks />
             <p className="small">
               Share your location so we can confirm service availability for
               your event.
@@ -430,6 +418,7 @@ export default function Home() {
             url: business.origin,
             email: business.email,
             telephone: business.phoneHref,
+            sameAs: Object.values(business.social).filter(Boolean),
             image: business.origin + '/images/shelz-logo.jpg',
             description:
               'Photography, videography and complete event production.',

@@ -40,7 +40,7 @@ Semantic landmarks, skip link, labelled fields, touch targets, visible focus, re
 
 ## Verification notes
 
-Checked both pages at 375, 390, 768, 1024, 1280 and 1440px with no horizontal overflow. Verified required service validation, email draft contents, edit preservation, mobile menu Escape/focus restoration, portfolio filtering and empty states, lightbox opening/Escape, reduced-motion scroll behaviour, all 32 WhatsApp link configurations and successful page/robots/sitemap responses. No test enquiry was sent. Social links are intentionally absent pending confirmation. Optional WebMCP could not be contract-tested because the browser does not expose modelContext. Lint covers authored application code; bundled untouched UI primitives and their unused hook are excluded because they have pre-existing lint findings. A full WCAG audit and real-device testing remain separate from these checks.
+Checked both pages at 375, 390, 768, 1024, 1280 and 1440px with no horizontal overflow. Verified required service validation, email draft contents, edit preservation, mobile menu Escape/focus restoration, portfolio filtering and empty states, lightbox opening/Escape, reduced-motion scroll behaviour, all 32 WhatsApp link configurations and successful page/robots/sitemap responses. No test enquiry was sent. Confirmed Instagram and Facebook profiles are linked in the social section, contact section and footer. Optional WebMCP could not be contract-tested because the browser does not expose modelContext. Lint covers authored application code; bundled untouched UI primitives and their unused hook are excluded because they have pre-existing lint findings. A full WCAG audit and real-device testing remain separate from these checks.
 
 ## September 2026 visual redesign
 

@@ -15,8 +15,8 @@ export const business = {
   // Use only a confirmed, public HTTPS form endpoint. Never put secrets here.
   quoteEndpoint: '',
   social: {
-    Instagram: '',
-    Facebook: '',
+    Instagram: 'https://www.instagram.com/shelzmedia/',
+    Facebook: 'https://www.facebook.com/share/1bPgxywhPT/?mibextid=wwXIfr',
     YouTube: '',
     TikTok: '',
     LinkedIn: '',

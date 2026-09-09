@@ -2128,3 +2128,33 @@ form[hidden] {
     font-size: 15px;
   }
 }
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin: 20px 0;
+}
+.social-links > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid currentColor;
+  border-radius: 25px;
+  padding: 9px 16px;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 500;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.social-links > a:hover {
+  background: #fc643b;
+  color: #191917;
+}
+.footer > .social-links {
+  margin-top: 30px;
+}
+.social-block .social-links {
+  color: #eaff70;
+}
