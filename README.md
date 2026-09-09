@@ -29,3 +29,7 @@ Run the production build. `.openai/hosting.json` retains the Sites project ident
 ## Accessibility
 
 Semantic landmarks, skip link, labelled fields, touch targets, visible focus, reduced motion, dialog-managed focus and Escape dismissal, and accessible selection primitives are included. The quote form optionally exposes `stage_quote_services` through browser WebMCP; this only stages selections and never submits.
+
+## Verification notes
+
+Checked both pages at 375, 390, 768, 1024, 1280 and 1440px with no horizontal overflow. Verified required service validation, email draft contents, edit preservation, mobile menu Escape/focus restoration, portfolio filtering and empty states, lightbox opening/Escape, reduced-motion scroll behaviour, all 32 WhatsApp link configurations and successful page/robots/sitemap responses. No test enquiry was sent. Social links are intentionally absent pending confirmation. Optional WebMCP could not be contract-tested because the browser does not expose modelContext. Lint covers authored application code; bundled untouched UI primitives and their unused hook are excluded because they have pre-existing lint findings. A full WCAG audit and real-device testing remain separate from these checks.

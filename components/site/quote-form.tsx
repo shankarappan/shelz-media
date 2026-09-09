@@ -337,9 +337,9 @@ export function QuoteForm() {
                       v ? [...chosen, s] : chosen.filter((x) => x !== s),
                     )
                   }
-                  aria-label={s}
+                  aria-labelledby={`service-${s.replaceAll(' ', '-')}`}
                 />
-                <span>{s}</span>
+                <span id={`service-${s.replaceAll(' ', '-')}`}>{s}</span>
               </label>
             ))}
           </div>
@@ -370,10 +370,12 @@ export function QuoteForm() {
           <Checkbox
             checked={consent}
             onCheckedChange={setConsent}
-            aria-label="I agree to be contacted about my enquiry"
+            aria-labelledby="consent-label"
           />
           <span>
-            I agree to Shelz Media contacting me about this enquiry.{' '}
+            <span id="consent-label">
+              I agree to Shelz Media contacting me about this enquiry.
+            </span>{' '}
             <Link href="#privacy">Privacy details</Link>
           </span>
         </label>

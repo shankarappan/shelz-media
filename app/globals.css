@@ -1540,3 +1540,29 @@ form[hidden] {
 .footer-bottom {
   font-size: 12px;
 }
+.contact-copy {
+  min-width: 0;
+}
+@media (max-width: 767px) {
+  .contact {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .contact-copy h2 {
+    font-size: 54px;
+  }
+  .contact-copy h2 br:nth-child(2) {
+    display: initial;
+  }
+  .form-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  .hero-bottom {
+    bottom: 20px;
+  }
+  .hero {
+    min-height: 730px;
+  }
+  .footer {
+    padding-bottom: 110px;
+  }
+}
