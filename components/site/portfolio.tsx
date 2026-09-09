@@ -25,9 +25,9 @@ export function Portfolio({ full = false }: { full?: boolean }) {
     >
       <div className="section-top">
         <div>
-          <p className="eyebrow">THE POSSIBILITIES</p>
+          <p className="eyebrow">THE MOOD. THE MOMENTS.</p>
           <h2>
-            Every event has <em>a story.</em>
+            Life looks <em>better in full colour.</em>
           </h2>
         </div>
         {!full && (

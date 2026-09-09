@@ -85,7 +85,7 @@ export const projects: Project[] = [
 export const services = [
   {
     number: '01',
-    title: 'Capture & create',
+    title: 'Capture the feeling.',
     subtitle: 'PHOTOGRAPHY & FILM',
     image: '/images/wedding.jpg',
     alt: 'Wedding celebration under string lights',
@@ -124,8 +124,8 @@ export const services = [
   },
   {
     number: '02',
-    title: 'Set the scene',
-    subtitle: 'EVENT & TECHNICAL PRODUCTION',
+    title: 'Make a scene.',
+    subtitle: 'DECORATION & PRODUCTION',
     image: '/images/production.jpg',
     alt: 'LED screens and lighting on an event stage',
     description: 'Make the room feel as extraordinary as the occasion.',
@@ -150,7 +150,7 @@ export const services = [
   },
   {
     number: '03',
-    title: 'Bring it together',
+    title: 'Bring the energy.',
     subtitle: 'EVENT OPERATIONS & STREAMING',
     image: '/images/concert.jpg',
     alt: 'Crowd enjoying a coordinated live concert production',

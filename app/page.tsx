@@ -4,7 +4,6 @@
 import Link from 'next/link';
 import {
   ArrowUpRight,
-  ArrowDown,
   MessageCircle,
   Camera,
   Clapperboard,
@@ -13,6 +12,7 @@ import {
   Check,
   Plus,
 } from 'lucide-react';
+import { Hero } from '@/components/site/hero';
 import { Header } from '@/components/site/header';
 import { Footer } from '@/components/site/footer';
 import { Portfolio } from '@/components/site/portfolio';
@@ -49,64 +49,18 @@ export default function Home() {
     <>
       <Header />
       <main id="main">
-        <section className="hero" id="home">
-          <img
-            className="hero-image"
-            src="/images/concert.jpg"
-            srcSet="/images/concert-640.jpg 640w, /images/concert-1100.jpg 1100w, /images/concert.jpg 2200w"
-            sizes="100vw"
-            alt="Audience under warm concert lights — illustrative event photography"
-            width="2200"
-            height="1168"
-            fetchPriority="high"
-          />
-          <div className="hero-shade" />
-          <div className="hero-content">
-            <p className="eyebrow">
-              <span /> ONE TEAM. EVERY MOMENT.
-            </p>
-            <h1>
-              Capture the moment.
-              <br />
-              <em>Produce the experience.</em>
-            </h1>
-            <p className="hero-copy">
-              Photography, film and complete event production.
-              <br />
-              From the first cue to the final frame, we bring it all together.
-            </p>
-            <div className="actions">
-              <Link className="button gold" href="#contact">
-                Request a quote <ArrowUpRight size={18} />
-              </Link>
-              <Link
-                className="button outline"
-                href={whatsappUrl()}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <MessageCircle size={18} /> Chat on WhatsApp
-              </Link>
-            </div>
-          </div>
-          <div className="hero-bottom">
-            <Link href="#services">
-              EXPLORE THE EXPERIENCE <ArrowDown size={15} />
-            </Link>
-            <span>EVENT INSPIRATION · ILLUSTRATIVE PHOTOGRAPHY</span>
-          </div>
-        </section>
+        <Hero />
         <div className="service-strip">
           PHOTOGRAPHY <span>✦</span> VIDEOGRAPHY <span>✦</span> EVENT PRODUCTION{' '}
           <span>✦</span> LIGHTING & LED WALLS <span>✦</span> LIVE STREAMING
         </div>
         <section className="section intro" id="about">
-          <p className="eyebrow">MORE THAN A MOMENT</p>
+          <p className="eyebrow">WE’RE YOUR EVENT PEOPLE</p>
           <div>
             <h2>
-              A remarkable event.
+              A little louder.
               <br />
-              <em>One connected team.</em>
+              <em>A lot more memorable.</em>
             </h2>
             <div className="intro-bottom">
               <p>
@@ -123,9 +77,9 @@ export default function Home() {
         <section className="section services" id="services">
           <div className="section-top">
             <div>
-              <p className="eyebrow">WHAT WE BRING</p>
+              <p className="eyebrow">THREE WAYS TO MAKE IT HAPPEN</p>
               <h2>
-                Every detail. <em>All together.</em>
+                Dream it. <em>We’ll bring it.</em>
               </h2>
             </div>
             <p>
@@ -137,6 +91,14 @@ export default function Home() {
           <div className="service-grid">
             {services.map((s, i) => (
               <article className="service-card" key={s.number}>
+                <img
+                  className="service-cover"
+                  src={s.image}
+                  alt={`${s.alt} — event inspiration`}
+                  width="700"
+                  height="480"
+                  loading="lazy"
+                />
                 <div className="service-card-head">
                   <span>{s.number} /</span>
                   {i === 0 ? (
@@ -215,11 +177,9 @@ export default function Home() {
           <div className="production-copy">
             <p className="eyebrow">FROM VISION TO SHOWTIME</p>
             <h2>
-              One event.
+              From “what if”
               <br />
-              One team.
-              <br />
-              <em>Every moving part.</em>
+              to <em>“wow.”</em>
             </h2>
             <p>
               Your event deserves a connected plan. Shelz Media brings creative
@@ -255,9 +215,9 @@ export default function Home() {
           <p className="eyebrow">THE SHELZ APPROACH</p>
           <div className="why-grid">
             <h2>
-              Creative minds.
+              All the creativity.
               <br />
-              <em>Considered delivery.</em>
+              <em>None of the guesswork.</em>
             </h2>
             <div className="why-list">
               {[
@@ -290,7 +250,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">WHATEVER THE OCCASION</p>
               <h2>
-                For the moments <em>that bring us together.</em>
+                Made for <em>your kind of celebration.</em>
               </h2>
             </div>
           </div>
@@ -344,7 +304,7 @@ export default function Home() {
             <div>
               <p className="eyebrow">SIMPLE FROM THE START</p>
               <h2>
-                Your idea. <em>Our next steps.</em>
+                Good things. <em>In the making.</em>
               </h2>
             </div>
             <Link className="text-link" href="#contact">
@@ -382,9 +342,9 @@ export default function Home() {
           <div>
             <p className="eyebrow">REAL EXPERIENCES</p>
             <h2>
-              Good work starts
+              Big moments start
               <br />
-              <em>with trust.</em>
+              <em>with a conversation.</em>
             </h2>
             <p>
               Our client stories are being gathered. In the meantime, talk to us
@@ -425,11 +385,11 @@ export default function Home() {
           <div className="contact-copy">
             <p className="eyebrow">LET’S MAKE IT HAPPEN</p>
             <h2>
-              Something
+              Got a date?
               <br />
-              extraordinary
+              An idea?
               <br />
-              <em>starts here.</em>
+              <em>Let’s do this.</em>
             </h2>
             <p>
               A date in the diary. An idea taking shape.

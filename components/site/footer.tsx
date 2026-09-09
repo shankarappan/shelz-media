@@ -8,6 +8,9 @@ export function Footer() {
   return (
     <>
       <footer className="footer">
+        <div className="footer-wordmark" aria-hidden="true">
+          SHELZ<span>®</span> MEDIA
+        </div>
         <div className="footer-top">
           <Link className="brand" href="/#home">
             <img
