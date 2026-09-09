@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/site/link';
 import { useEffect, useState, type SyntheticEvent } from 'react';
 import { ArrowUpRight, Download, Mail, MessageCircle } from 'lucide-react';
 import { Checkbox } from '@/components/ui/checkbox';

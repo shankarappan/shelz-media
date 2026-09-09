@@ -2,7 +2,7 @@
 /* eslint-disable nextjs/no-img-element */
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/site/link';
 import { useState } from 'react';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
 import {

@@ -1,5 +1,9 @@
 # Shelz Media
 
+**Public website:** https://shankarappan.github.io/shelz-media/
+
+**Repository:** https://github.com/shankarappan/shelz-media
+
 Colourful, dimensional creative-studio site with animated 3D camera artwork, oversized Syne typography, photo collages and orange, pink and acid-yellow service sections. Built with Vinext (Next.js App Router APIs), TypeScript, React, clean CSS and the scaffold's accessible Base UI/Shadcn primitives.
 
 ## Run
@@ -24,7 +28,11 @@ Home sections: hero, introduction/about, services, portfolio, full production, a
 
 ## Deployment
 
-Run the production build. `.openai/hosting.json` retains the Sites project identity. Package using the Sites helper and publish the matching committed source via Sites. For other hosting, use a Cloudflare Workers-compatible Vinext deployment, or deliberately configure a supported export. Do not upload source secrets.
+GitHub Pages is the public client-review host. Push to `main` to run `.github/workflows/pages.yml`. It installs the locked dependencies, builds via `npm run build:pages`, and deploys only `dist/client`. No server, API keys or paid hosting are required.
+
+`build:pages` sets the public base path and canonical origin, exports both routes, normalises the static asset directory, creates clean `/work/` navigation, and verifies referenced assets. Static-mode links use full-page navigation so GitHub Pages never needs a React server. The enquiry form continues to prepare an email; it does not pretend to submit to a backend.
+
+`npm run dev` and `npm run build` retain the original root-domain/Sites setup for local development and optional Cloudflare-compatible hosting. `.openai/hosting.json` contains only the original hosting identity, not credentials. The existing private Sites preview is unaffected by GitHub deployments.
 
 ## Accessibility
 

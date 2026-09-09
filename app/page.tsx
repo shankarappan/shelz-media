@@ -1,7 +1,8 @@
 /* Images are pre-compressed local assets with responsive sources; no runtime image service required. */
 /* eslint-disable nextjs/no-img-element */
 
-import Link from 'next/link';
+import Link from '@/components/site/link';
+import { assetPath } from '@/lib/site-path';
 import {
   ArrowUpRight,
   MessageCircle,
@@ -44,6 +45,7 @@ const eventTypes = [
     'Visual storytelling and event support for product launches, schools and universities.',
   ],
 ];
+export const dynamic = 'force-static';
 export default function Home() {
   return (
     <>
@@ -162,8 +164,8 @@ export default function Home() {
         <section className="production" id="production">
           <div className="production-photo">
             <img
-              src="/images/production.jpg"
-              srcSet="/images/production-640.jpg 640w, /images/production-1100.jpg 1100w, /images/production.jpg 1700w"
+              src={assetPath('/images/production.jpg')}
+              srcSet={`${assetPath('/images/production-640.jpg')} 640w, ${assetPath('/images/production-1100.jpg')} 1100w, ${assetPath('/images/production.jpg')} 1700w`}
               sizes="(max-width: 767px) 100vw, 55vw"
               alt="Stage lighting and LED walls at a live event — illustrative event scene"
               width="1700"

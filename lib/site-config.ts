@@ -1,10 +1,13 @@
+import { assetPath } from './site-path';
 export const business = {
   name: 'Shelz Media',
   email: 'info@shelzmedia.nz',
   phone: '+64 210 841 8396',
   phoneHref: '+642108418396',
   whatsappNumber: '642108418396',
-  origin: 'https://shelz-media.shankarappan.chatgpt.site',
+  origin:
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    'https://shelz-media.shankarappan.chatgpt.site',
   primaryCity: '',
   serviceAreas: [] as string[],
   address: '',
@@ -55,7 +58,7 @@ export const projects: Project[] = [
     id: 'live',
     title: 'Feel every moment.',
     category: 'Concerts',
-    image: '/images/concert.jpg',
+    image: assetPath('/images/concert.jpg'),
     alt: 'Amber beams illuminating a concert stage and audience',
     description:
       'Concert photography, performance films and event production, brought together around the energy of the room. This is licensed illustrative photography, not a Shelz Media project.',
@@ -65,7 +68,7 @@ export const projects: Project[] = [
     id: 'wedding',
     title: 'Your story, beautifully told.',
     category: 'Weddings',
-    image: '/images/wedding.jpg',
+    image: assetPath('/images/wedding.jpg'),
     alt: 'A couple dancing at an outdoor wedding reception under string lights',
     description:
       'Photography and film for the quiet glances, the big celebrations and everything in between. This is licensed illustrative photography, not a Shelz Media project.',
@@ -75,7 +78,7 @@ export const projects: Project[] = [
     id: 'stage',
     title: 'Set the stage for something special.',
     category: 'Stage and Production',
-    image: '/images/production.jpg',
+    image: assetPath('/images/production.jpg'),
     alt: 'Concert stage with LED screens, lighting rigging and a live audience',
     description:
       'Lighting, LED walls, staging and coordination shaped around your event. This is licensed illustrative photography, not a Shelz Media project.',
@@ -87,7 +90,7 @@ export const services = [
     number: '01',
     title: 'Capture the feeling.',
     subtitle: 'PHOTOGRAPHY & FILM',
-    image: '/images/wedding.jpg',
+    image: assetPath('/images/wedding.jpg'),
     alt: 'Wedding celebration under string lights',
     description:
       'The atmosphere, the emotion, the moments you never want to lose.',
@@ -126,7 +129,7 @@ export const services = [
     number: '02',
     title: 'Make a scene.',
     subtitle: 'DECORATION & PRODUCTION',
-    image: '/images/production.jpg',
+    image: assetPath('/images/production.jpg'),
     alt: 'LED screens and lighting on an event stage',
     description: 'Make the room feel as extraordinary as the occasion.',
     items: [
@@ -152,7 +155,7 @@ export const services = [
     number: '03',
     title: 'Bring the energy.',
     subtitle: 'EVENT OPERATIONS & STREAMING',
-    image: '/images/concert.jpg',
+    image: assetPath('/images/concert.jpg'),
     alt: 'Crowd enjoying a coordinated live concert production',
     description:
       'The detail behind the scenes. The confidence to enjoy the day.',

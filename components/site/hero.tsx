@@ -1,5 +1,6 @@
 /* eslint-disable nextjs/no-img-element */
-import Link from 'next/link';
+import Link from '@/components/site/link';
+import { assetPath } from '@/lib/site-path';
 import {
   ArrowUpRight,
   ArrowDownRight,
@@ -62,7 +63,7 @@ export function Hero() {
       <div className="hero-playground">
         <img
           className="hero-art"
-          src="/images/creative-camera.png"
+          src={assetPath('/images/creative-camera.png')}
           alt="Sculptural 3D camera with a chrome sparkle, pink loop and celebration ribbons"
           width="1254"
           height="1254"
@@ -70,7 +71,7 @@ export function Hero() {
         />
         <div className="photo-postcard photo-live">
           <img
-            src="/images/concert-640.jpg"
+            src={assetPath('/images/concert-640.jpg')}
             width="640"
             height="340"
             alt="Live concert inspiration with dramatic stage lighting"
@@ -81,7 +82,7 @@ export function Hero() {
         </div>
         <div className="photo-postcard photo-love">
           <img
-            src="/images/wedding-640.jpg"
+            src={assetPath('/images/wedding-640.jpg')}
             width="640"
             height="427"
             alt="Wedding inspiration: a couple dancing beneath string lights"

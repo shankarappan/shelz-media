@@ -1,7 +1,8 @@
 /* Images are pre-compressed local assets with responsive sources; no runtime image service required. */
 /* eslint-disable nextjs/no-img-element */
 
-import Link from 'next/link';
+import Link from '@/components/site/link';
+import { assetPath } from '@/lib/site-path';
 import { ArrowUpRight, MessageCircle, Mail, Phone } from 'lucide-react';
 import { business, whatsappUrl } from '@/lib/site-config';
 export function Footer() {
@@ -14,7 +15,7 @@ export function Footer() {
         <div className="footer-top">
           <Link className="brand" href="/#home">
             <img
-              src="/images/shelz-logo.jpg"
+              src={assetPath('/images/shelz-logo.jpg')}
               width="65"
               height="65"
               alt="Shelz Media logo"

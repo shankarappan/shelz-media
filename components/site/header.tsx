@@ -2,7 +2,8 @@
 /* eslint-disable nextjs/no-img-element */
 'use client';
 
-import Link from 'next/link';
+import Link from '@/components/site/link';
+import { assetPath } from '@/lib/site-path';
 import { useState } from 'react';
 import { ArrowUpRight, Menu, MessageCircle } from 'lucide-react';
 import {
@@ -30,7 +31,12 @@ export function Header() {
       </Link>
       <header className="header">
         <Link className="brand" href="/#home" aria-label="Shelz Media home">
-          <img src="/images/shelz-logo.jpg" alt="" width="58" height="58" />
+          <img
+            src={assetPath('/images/shelz-logo.jpg')}
+            alt=""
+            width="58"
+            height="58"
+          />
           <span>
             SHELZ<span className="brand-sub">MEDIA & EVENT PRODUCTION</span>
           </span>
