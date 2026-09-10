@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { shareImage } from '@/lib/share-image';
 import { business } from '@/lib/site-config';
 import { Header } from '@/components/site/header';
 import { Footer } from '@/components/site/footer';
@@ -12,6 +13,9 @@ export const metadata: Metadata = {
     title: 'Our Work & Event Inspiration | Shelz Media',
     description: 'Photography, film and event production inspiration.',
     url: business.origin + '/work/',
+    type: 'website',
+    siteName: 'Shelz Media',
+    images: [shareImage],
   },
 };
 export const dynamic = 'force-static';

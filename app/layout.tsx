@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import { shareImage } from '@/lib/share-image';
 import { business } from '@/lib/site-config';
 import { assetPath } from '@/lib/site-path';
 const origin = business.origin;
@@ -14,12 +15,14 @@ export const metadata: Metadata = {
     description: 'Photography, film and complete event production.',
     url: origin,
     type: 'website',
-    images: [{ url: origin + '/images/shelz-logo.jpg' }],
+    siteName: 'Shelz Media',
+    locale: 'en_NZ',
+    images: [shareImage],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Shelz Media | Event Production',
-    images: [origin + '/images/shelz-logo.jpg'],
+    images: [shareImage],
   },
   icons: { icon: assetPath('/images/shelz-logo.jpg') },
 };
