@@ -11,23 +11,36 @@ import {
   DialogTitle,
   DialogDescription,
 } from '@/components/ui/dialog';
-import { categories, projects, type Project } from '@/lib/site-config';
+import { portfolioPhotos as projects } from '@/lib/portfolio-photos';
+const categories = [
+  'All',
+  'Couple portraits',
+  'Wedding moments',
+  'Wedding parties',
+];
+type Project = (typeof projects)[number];
 export function Portfolio({ full = false }: { full?: boolean }) {
   const [filter, setFilter] = useState('All');
   const [selected, setSelected] = useState<Project | null>(null);
-  const visible = projects.filter(
+  const matches = projects.filter(
     (p) => filter === 'All' || p.category === filter,
   );
+  const visible = full ? matches : matches.slice(0, 6);
+  const stepPhoto = (direction: number) => {
+    if (!selected) return;
+    const index = matches.findIndex((p) => p.id === selected.id);
+    setSelected(matches[(index + direction + matches.length) % matches.length]);
+  };
   return (
     <section
-      className={`section portfolio ${full ? 'portfolio-full' : ''}`}
+      className={`section portfolio real-portfolio ${full ? 'portfolio-full' : ''}`}
       id="work"
     >
       <div className="section-top">
         <div>
-          <p className="eyebrow">THE MOOD. THE MOMENTS.</p>
+          <p className="eyebrow">THROUGH THE SHELZ LENS.</p>
           <h2>
-            Life looks <em>better in full colour.</em>
+            Real moments. <em>Beautifully kept.</em>
           </h2>
         </div>
         {!full && (
@@ -37,8 +50,8 @@ export function Portfolio({ full = false }: { full?: boolean }) {
         )}
       </div>
       <p className="portfolio-note">
-        A glimpse of the experiences we can help create. Imagery is
-        illustrative; our Shelz Media project collection is coming soon.
+        Wedding stories, quiet details and celebrations with your favourite
+        people. Photographed by Shelz Media.
       </p>
       <fieldset className="filters" aria-label="Filter event gallery">
         {(full ? categories : categories.slice(0, 4)).map((c) => (
@@ -48,7 +61,7 @@ export function Portfolio({ full = false }: { full?: boolean }) {
             className={filter === c ? 'active' : ''}
             onClick={() => setFilter(c)}
           >
-            {c === 'All' ? 'All events' : c}
+            {c === 'All' ? 'All photos' : c}
           </button>
         ))}
       </fieldset>
@@ -58,21 +71,20 @@ export function Portfolio({ full = false }: { full?: boolean }) {
             key={p.id}
             className="project"
             onClick={() => setSelected(p)}
-            aria-label={`View ${p.title} — illustrative ${p.category} image`}
+            aria-label={`View ${p.title} — ${p.category}`}
           >
             <div className="project-image">
               <img
-                src={p.image}
-                srcSet={`${p.image.replace('.jpg', '-640.jpg')} 640w, ${p.image.replace('.jpg', '-1100.jpg')} 1100w, ${p.image} 1600w`}
-                sizes="(max-width:767px) 90vw, 50vw"
+                src={p.thumbnail}
+                srcSet={`${p.thumbnail} ${Math.round(p.width * Math.min(1, 640 / Math.max(p.width, p.height)))}w, ${p.image} ${p.width}w`}
+                sizes="(max-width:600px) 90vw, (max-width:1000px) 44vw, 28vw"
                 alt={p.alt}
-                width="1100"
-                height="800"
+                width={p.width}
+                height={p.height}
+                decoding="async"
                 loading="lazy"
               />
-              <span className="image-label">
-                {p.demo ? 'ILLUSTRATIVE IMAGE' : 'SHELZ MEDIA PROJECT'}
-              </span>
+              <span className="image-label">SHELZ MEDIA</span>
               <span className="project-arrow">
                 <ArrowUpRight size={24} />
               </span>
@@ -84,6 +96,11 @@ export function Portfolio({ full = false }: { full?: boolean }) {
           </button>
         ))}
       </div>
+      {!full && (
+        <Link className="button gallery-more" href="/work">
+          View all 17 photographs <ArrowUpRight size={18} />
+        </Link>
+      )}
       {visible.length === 0 && (
         <div className="empty-state">
           <h3>More stories to come.</h3>
@@ -102,27 +119,48 @@ export function Portfolio({ full = false }: { full?: boolean }) {
           if (!o) setSelected(null);
         }}
       >
-        <DialogContent className="lightbox">
+        <DialogContent
+          className="lightbox"
+          onKeyDown={(event) => {
+            if (event.key === 'ArrowLeft') {
+              event.preventDefault();
+              stepPhoto(-1);
+            }
+            if (event.key === 'ArrowRight') {
+              event.preventDefault();
+              stepPhoto(1);
+            }
+          }}
+        >
           {selected && (
             <>
               <DialogTitle>{selected.title}</DialogTitle>
-              {selected.video ? (
-                <video
-                  controls
-                  poster={selected.image}
-                  aria-label={selected.title}
+              <img
+                src={selected.image}
+                alt={selected.alt}
+                width={selected.width}
+                height={selected.height}
+              />
+              <div className="gallery-navigation">
+                <button
+                  type="button"
+                  onClick={() => stepPhoto(-1)}
+                  aria-label="Previous photograph"
                 >
-                  <source src={selected.video} />
-                  <track kind="captions" />
-                </video>
-              ) : (
-                <img
-                  src={selected.image}
-                  alt={selected.alt}
-                  width="1600"
-                  height="1100"
-                />
-              )}
+                  ← Previous
+                </button>
+                <span aria-live="polite">
+                  {matches.findIndex((p) => p.id === selected.id) + 1} /{' '}
+                  {matches.length}
+                </span>
+                <button
+                  type="button"
+                  onClick={() => stepPhoto(1)}
+                  aria-label="Next photograph"
+                >
+                  Next →
+                </button>
+              </div>
               <DialogDescription>{selected.description}</DialogDescription>
               <Link
                 className="text-link"

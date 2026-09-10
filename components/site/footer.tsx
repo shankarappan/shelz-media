@@ -22,7 +22,8 @@ export function Footer() {
               alt="Shelz Media logo"
             />
             <span>
-              SHELZ MEDIA<span className="brand-sub">MEDIA & EVENT PRODUCTION</span>
+              SHELZ MEDIA
+              <span className="brand-sub">MEDIA & EVENT PRODUCTION</span>
             </span>
           </Link>
           <p>
@@ -63,7 +64,8 @@ export function Footer() {
             {business.email} about your information. No analytics are enabled.
           </p>
           <p>
-            Illustrative photography from Unsplash:{' '}
+            Gallery photographs are by Shelz Media. Illustrative service imagery
+            is from Unsplash:{' '}
             <Link
               href="https://unsplash.com/es/fotos/wV22Llnxc78"
               target="_blank"

@@ -2174,3 +2174,22 @@ form[hidden] {
   .hero-playground .studio-sticker { width: 92px; height: 92px; right: 0; }
   .hero-playground .studio-sticker strong { font-size: 15px; }
 }
+
+/* A photographic contact sheet: original ratios and quiet editorial captions. */
+.real-portfolio .portfolio-grid { display:block; columns:3; column-gap:24px; }
+.real-portfolio .project, .real-portfolio .project:first-child { display:block; width:100%; height:auto; break-inside:avoid; margin:0 0 30px; }
+.real-portfolio .project-image, .real-portfolio .project:first-child .project-image { height:auto; min-height:0; border-radius:12px; background:#eeeae2; }
+.real-portfolio .project-image img { display:block; width:100%; height:auto; object-fit:contain; filter:none; }
+.real-portfolio .project:hover .project-image img { transform:none; }
+.real-portfolio .project:hover .project-arrow { background:#eaff70; transform:rotate(45deg); }
+.real-portfolio .project-arrow { transition:transform .25s,background .25s; width:36px; height:36px; }
+.real-portfolio .image-label { display:none; }
+.real-portfolio .project-caption { padding:14px 2px 0; }
+.real-portfolio .project-caption h3 { font-size:20px; line-height:1.3; margin-top:5px; }
+.real-portfolio .project-caption p { font-size:10px; letter-spacing:1.5px; text-transform:uppercase; }
+.gallery-more { margin:15px auto 0; display:flex; width:fit-content; background:#191a16; color:#fff; }
+.gallery-navigation { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.gallery-navigation button { padding:12px 16px; border:1px solid #d4d1c8; border-radius:30px; background:transparent; min-height:44px; cursor:pointer; }
+.gallery-navigation button:hover { background:#eaff70; }
+@media(max-width:1000px) { .real-portfolio .portfolio-grid { columns:2; } }
+@media(max-width:600px) { .real-portfolio .portfolio-grid { columns:1; } }

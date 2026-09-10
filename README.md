@@ -51,3 +51,7 @@ Checked both pages at 375, 390, 768, 1024, 1280 and 1440px with no horizontal ov
 Preserves the supplied Shelz logo and all quote, WhatsApp, portfolio and navigation behaviour. New hero artwork was generated with the built-in image-generation tool and saved at `public/images/creative-camera.png`; it is an illustrative 3D composition, not a product or client-work claim. Animation respects reduced-motion preferences.
 
 Image prompt: Premium playful 3D studio still life for a photography, event and decor company. Central floating black mirrorless camera with coral-orange accents and reflective lens, chrome inflated four-point sparkle, polished hot pink ribbon, lemon-yellow balloon and orange confetti. Three-quarter view, tactile materials, transparent alpha background, no logos or text.
+
+## Shelz photography collection
+
+The homepage features six selected photographs; `/work` presents all 17 supplied wedding photographs with category filters and a keyboard-accessible lightbox. Data lives in `lib/portfolio-photos.ts`, and compressed JPEGs in `public/images/portfolio`. Original compositions and watermarks are preserved. Gallery photographs are real Shelz Media work; service-section stock photography remains illustrative. The event-focused stage hero is unchanged.

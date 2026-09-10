@@ -5,13 +5,13 @@ import { Header } from '@/components/site/header';
 import { Footer } from '@/components/site/footer';
 import { Portfolio } from '@/components/site/portfolio';
 export const metadata: Metadata = {
-  title: 'Our Work & Event Inspiration | Shelz Media',
+  title: 'Our Work & Wedding Photography | Shelz Media',
   description:
-    'Explore the possibilities for weddings, concerts, cultural events and stage production. Shelz Media’s project collection is coming soon.',
+    'Explore wedding photography by Shelz Media: couple portraits, wedding parties and the details that make a celebration personal.',
   alternates: { canonical: business.origin + '/work/' },
   openGraph: {
-    title: 'Our Work & Event Inspiration | Shelz Media',
-    description: 'Photography, film and event production inspiration.',
+    title: 'Our Work & Wedding Photography | Shelz Media',
+    description: 'Real wedding moments photographed by Shelz Media.',
     url: business.origin + '/work/',
     type: 'website',
     siteName: 'Shelz Media',
