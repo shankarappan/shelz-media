@@ -1,8 +1,8 @@
 # Shelz Media
 
-**Cloudflare website:** https://shelz-media.pages.dev
+**Public website:** https://shelzmedia.nz
 
-**Custom domain:** https://shelzmedia.nz (DNS activation pending)
+**Cloudflare preview:** https://shelz-media.pages.dev
 
 **Repository:** https://github.com/shankarappan/shelz-media
 
