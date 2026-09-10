@@ -54,7 +54,7 @@ export default function Home() {
       <main id="main">
         <Hero />
         <div className="service-strip">
-          PHOTOGRAPHY <span>✦</span> VIDEOGRAPHY <span>✦</span> EVENT PRODUCTION{' '}
+          EVENT PRODUCTION <span>✦</span> CONCERTS <span>✦</span> PHOTOGRAPHY & FILM{' '}
           <span>✦</span> LIGHTING & LED WALLS <span>✦</span> LIVE STREAMING
         </div>
         <section className="section intro" id="about">
@@ -421,7 +421,7 @@ export default function Home() {
             sameAs: Object.values(business.social).filter(Boolean),
             image: business.origin + '/images/shelz-logo.jpg',
             description:
-              'Photography, videography and complete event production.',
+              'Events, concerts and complete production, with photography and film.',
             hasOfferCatalog: {
               '@type': 'OfferCatalog',
               name: 'Event services',

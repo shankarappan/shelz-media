@@ -1944,7 +1944,7 @@ form[hidden] {
   z-index: 3;
   pointer-events: none;
   filter: drop-shadow(0 20px 16px #29211b14);
-  animation: camera-float 7s ease-in-out infinite;
+  animation: stage-float 7s ease-in-out infinite;
 }
 .photo-live {
   z-index: 1;
@@ -1961,7 +1961,7 @@ form[hidden] {
   bottom: 12px;
   right: -9px;
 }
-@keyframes camera-float {
+@keyframes stage-float {
   0%,
   100% {
     transform: translateY(0) rotate(-3deg);
@@ -2163,4 +2163,14 @@ form[hidden] {
 .brand > span { white-space: nowrap; }
 @media (max-width: 380px) {
   .header-actions > .button { display: none; }
+}
+
+/* Give the concert stage an unobstructed canvas. */
+.hero-playground .hero-art { width: 112%; height: 100%; left: -6%; top: -2%; }
+.hero-playground .studio-sticker { width: 112px; height: 112px; bottom: 0; right: -4px; }
+.hero-playground .studio-sticker strong { font-size: 18px; }
+@media (max-width: 767px) {
+  .hero-playground .hero-art { width: 104%; left: -2%; }
+  .hero-playground .studio-sticker { width: 92px; height: 92px; right: 0; }
+  .hero-playground .studio-sticker strong { font-size: 15px; }
 }

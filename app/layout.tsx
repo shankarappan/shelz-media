@@ -6,13 +6,13 @@ import { assetPath } from '@/lib/site-path';
 const origin = business.origin;
 export const metadata: Metadata = {
   metadataBase: new URL(origin),
-  title: 'Shelz Media | Photography, Videography & Event Production',
+  title: 'Shelz Media | Events, Concerts & Complete Production',
   description:
-    'Photography, videography and complete event production. Lighting, LED walls, staging, event coordination and live streaming for celebrations, concerts and corporate events.',
+    'Events, concerts and complete production. Lighting, LED screens, decorations, planning and security, with photography, filming and live streaming.',
   alternates: { canonical: origin + '/' },
   openGraph: {
     title: 'Shelz Media — From the first cue to the final frame.',
-    description: 'Photography, film and complete event production.',
+    description: 'Events, concerts and complete production — with photography and film.',
     url: origin,
     type: 'website',
     siteName: 'Shelz Media',

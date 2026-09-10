@@ -5,7 +5,6 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   MessageCircle,
-  MoveUpRight,
 } from 'lucide-react';
 import { whatsappUrl } from '@/lib/site-config';
 export function Hero() {
@@ -13,7 +12,7 @@ export function Hero() {
     <section className="creative-hero" id="home">
       <div className="hero-intro">
         <p className="studio-label">
-          <span /> PHOTO. FILM. EVENTS. A LITTLE MAGIC.
+          <span /> EVENTS. CONCERTS. COMPLETE PRODUCTION.
         </p>
         <h1>
           Make it
@@ -32,9 +31,9 @@ export function Hero() {
           <span className="hero-period">.</span>
         </h1>
         <p className="new-hero-copy">
-          Big celebrations. Beautiful details. Stories worth keeping.
+          Big stages. Unforgettable celebrations.
           <br />
-          We capture it, style it and bring it all to life.
+          From lighting and LED screens to planning, photography and film — we bring your event to life.
         </p>
         <div className="hero-buttons">
           <Link className="button hero-primary" href="#contact">
@@ -55,7 +54,7 @@ export function Hero() {
             <ArrowDownRight size={24} />
           </span>
           <p>
-            Your photography, decoration &<br />
+            Your events, production &<br />
             <strong>all-things-event people.</strong>
           </p>
         </div>
@@ -63,45 +62,23 @@ export function Hero() {
       <div className="hero-playground">
         <img
           className="hero-art"
-          src={assetPath('/images/creative-camera.png')}
-          alt="Sculptural 3D camera with a chrome sparkle, pink loop and celebration ribbons"
+          src={assetPath('/images/creative-stage.png')}
+          alt="Illustrative 3D concert stage with LED screens, colourful lighting, performers and a crowd"
           width="1254"
           height="1254"
           fetchPriority="high"
         />
-        <div className="photo-postcard photo-live">
-          <img
-            src={assetPath('/images/concert-640.jpg')}
-            width="640"
-            height="340"
-            alt="Live concert inspiration with dramatic stage lighting"
-          />
-          <span>
-            TURN IT UP. <MoveUpRight size={15} />
-          </span>
-        </div>
-        <div className="photo-postcard photo-love">
-          <img
-            src={assetPath('/images/wedding-640.jpg')}
-            width="640"
-            height="427"
-            alt="Wedding inspiration: a couple dancing beneath string lights"
-          />
-          <span>
-            FEEL EVERYTHING. <MoveUpRight size={15} />
-          </span>
-        </div>
         <div className="studio-sticker">
           <span>GOOD TIMES.</span>
           <strong>
             GREAT
             <br />
-            STORIES.
+            EVENTS.
           </strong>
           <ArrowUpRight size={26} />
         </div>
         <span className="visual-credit">
-          IMAGINATION + ILLUSTRATIVE PHOTOGRAPHY
+          ILLUSTRATIVE EVENT PRODUCTION
         </span>
       </div>
       <div className="hero-edition">
