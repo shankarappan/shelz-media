@@ -1,6 +1,8 @@
 # Shelz Media
 
-**Public website:** https://shankarappan.github.io/shelz-media/
+**Cloudflare website:** https://shelz-media.pages.dev
+
+**Custom domain:** https://shelzmedia.nz (DNS activation pending)
 
 **Repository:** https://github.com/shankarappan/shelz-media
 
@@ -28,7 +30,9 @@ Home sections: hero, introduction/about, services, portfolio, full production, a
 
 ## Deployment
 
-GitHub Pages is the public client-review host. Push to `main` to run `.github/workflows/pages.yml`. It installs the locked dependencies, builds via `npm run build:pages`, and deploys only `dist/client`. No server, API keys or paid hosting are required.
+Cloudflare Pages is the primary host. `npm run build:cloudflare` exports the site for the root domain `https://shelzmedia.nz`; `npm run deploy:cloudflare` publishes locally with Cloudflare credentials set in the environment or Wrangler login. Credentials are never committed. Cloudflare deployment is currently manual; GitHub pushes update only the backup host.
+
+GitHub Pages remains a client-review backup. Push to `main` to run `.github/workflows/pages.yml`. It installs the locked dependencies, builds via `npm run build:pages`, and deploys only `dist/client`. No server, API keys or paid hosting are required.
 
 `build:pages` sets the public base path and canonical origin, exports both routes, normalises the static asset directory, creates clean `/work/` navigation, and verifies referenced assets. Static-mode links use full-page navigation so GitHub Pages never needs a React server. The enquiry form continues to prepare an email; it does not pretend to submit to a backend.
 
