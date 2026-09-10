@@ -1,7 +1,8 @@
 import { assetPath } from './site-path';
 export const business = {
   name: 'Shelz Media',
-  email: 'info@shelzmedia.nz',
+  // Temporary enquiry address until domain email is configured.
+  email: 'shelzmediaa@gmail.com',
   phone: '+64 210 841 8396',
   phoneHref: '+642108418396',
   whatsappNumber: '642108418396',
