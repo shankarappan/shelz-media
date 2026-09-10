@@ -38,7 +38,7 @@ export function Header() {
             height="58"
           />
           <span>
-            SHELZ<span className="brand-sub">MEDIA & EVENT PRODUCTION</span>
+            SHELZ MEDIA<span className="brand-sub">MEDIA & EVENT PRODUCTION</span>
           </span>
         </Link>
         <nav aria-label="Main navigation">

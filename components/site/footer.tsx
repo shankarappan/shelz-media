@@ -22,7 +22,7 @@ export function Footer() {
               alt="Shelz Media logo"
             />
             <span>
-              SHELZ<span className="brand-sub">MEDIA & EVENT PRODUCTION</span>
+              SHELZ MEDIA<span className="brand-sub">MEDIA & EVENT PRODUCTION</span>
             </span>
           </Link>
           <p>
