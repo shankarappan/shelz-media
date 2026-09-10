@@ -2161,8 +2161,12 @@ form[hidden] {
 
 /* Keep the complete brand name together on compact screens. */
 .brand > span { white-space: nowrap; }
-@media (max-width: 380px) {
+@media (max-width: 767px) {
   .header-actions > .button { display: none; }
+  .header-actions { flex: 0 0 auto; }
+  .header .brand { flex: 0 0 auto; }
+  .header .brand img { flex-shrink: 0; }
+  .header .menu-button { flex: 0 0 44px; width: 44px; min-height: 44px; }
 }
 
 /* Give the concert stage an unobstructed canvas. */
